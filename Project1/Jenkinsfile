@@ -10,6 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 git credentialsId: '849445ba-9f7b-48d9-a16c-554b1d1d3aaf', url: 'https://github.com/msethi006/DevOpsProjects.git'
+                export PYTHONPATH=$WORKSPACE:$PYTHONPATH
                 sh 'python3 ./Project1/app.py'
             }
         }
