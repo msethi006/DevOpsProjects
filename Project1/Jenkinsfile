@@ -10,7 +10,8 @@ pipeline {
         stage('Build') {
             steps {
                 git credentialsId: '849445ba-9f7b-48d9-a16c-554b1d1d3aaf', url: 'https://github.com/msethi006/DevOpsProjects.git'
-                export PYTHONPATH=$WORKSPACE:$PYTHONPATH
+                sh 'sudo apt install python3-pip'
+                sh 'pip install streamlit'
                 sh 'python3 ./Project1/app.py'
             }
         }
