@@ -12,6 +12,7 @@ pipeline {
                 git credentialsId: '849445ba-9f7b-48d9-a16c-554b1d1d3aaf', url: 'https://github.com/msethi006/DevOpsProjects.git'
                 sh 'python3 ./Project1/app.py'
             }
+        }
         stage('Test') {
             steps {
                 echo "Job test"
@@ -19,4 +20,3 @@ pipeline {
         }
         }
     }
-}
