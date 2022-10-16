@@ -5,7 +5,7 @@ EXPOSE 8501
 RUN apt-get update
 RUN pip3 install streamlit
 
-ADD app.py  ./app/
+ADD ./Project1/app.py  ./app/
 
 
 CMD streamlit run ./app/app.py
