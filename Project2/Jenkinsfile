@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-                label "test-server"  
+                label "test-server"  //ADD SLAVE AGENT NAME HERE
             }
     }
 
