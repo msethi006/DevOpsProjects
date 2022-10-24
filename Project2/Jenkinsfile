@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-                label "test-server"  //ADD SLAVE AGENT NAME HERE
+                label "test-server"  
             }
     }
 
@@ -14,6 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 git credentialsId: '849445ba-9f7b-48d9-a16c-554b1d1d3aaf', url: 'https://github.com/msethi006/DevOpsProjects.git'
+                sh 'docker stop $(docker ps -a -q)'
                 sh 'docker build -t webapp1 -f ./Project1/Dockerfile .'
                 sh 'docker run -d -p 8501:8501 webapp1'
             }
