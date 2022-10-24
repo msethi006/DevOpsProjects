@@ -7,5 +7,4 @@ RUN pip3 install streamlit
 
 ADD ./Project1/app.py  ./app/
 
-
 CMD streamlit run ./app/app.py
