@@ -1,7 +1,6 @@
 pipeline {
-    agent any
-
-    stages {
+    node('test-server') {
+        stages {
         stage('Checkout') {
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '849445ba-9f7b-48d9-a16c-554b1d1d3aaf', url: 'https://github.com/msethi006/DevOpsProjects.git']]])
@@ -19,5 +18,7 @@ pipeline {
                 echo "Job test"
             }
         }
+    }
+    
         }
     }
