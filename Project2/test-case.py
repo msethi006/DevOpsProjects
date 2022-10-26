@@ -3,6 +3,6 @@ headers = {'User-Agent' : 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) Apple
 s = requests.session()
 page_res = s.get('http://18.191.246.46:8501/', headers = headers)
 if page_res.status_code == 200:
-    print("WEbsite is working fine")
+    print("WEbsite is working fine",flush= True)
 else:
-    print('Website is not working')
+    print('Website is not working',flush= True)
