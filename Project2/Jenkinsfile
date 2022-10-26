@@ -23,7 +23,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'docker build -t testwebapp1 -f ./Project2/Dockerfile2 .'
-                sh 'docker run -d testwebapp1 -e PYTHONUNBUFFERED=1'
+                sh 'docker run -dt testwebapp1'
             }
         }
         }
