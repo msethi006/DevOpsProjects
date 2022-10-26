@@ -6,5 +6,5 @@ try:
     if page_res.status_code == 200:
         print("WEbsite is working fine",flush= True)
 except Exception as e:
-    print(e)
+    print(e,flush= True)
     print('Website is not working',flush= True)
