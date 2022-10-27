@@ -1,0 +1,2 @@
+[production]
+slave1 ansible_ssh_host=52.14.36.145
