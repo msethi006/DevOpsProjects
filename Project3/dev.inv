@@ -1,2 +1,2 @@
 [production]
-slave1 ansible_ssh_host=52.14.36.145
+52.14.36.145 ansible_user=ubuntu
