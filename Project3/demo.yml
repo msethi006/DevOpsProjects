@@ -11,9 +11,9 @@
     
     - name: Pulling from git
       shell: git clone "https://github.com/msethi006/DevOpsProjects.git"
-      
+
     - name: docker build from image
-      shell: docker build -t webapp1 -f ./Project3/Dockerfile .
+      shell: docker build -t webapp1 -f ./DevOpsProjects/Project3/Dockerfile .
     
     - name: docker running container
       shell: docker run -d -p 8501:8501 webapp1
