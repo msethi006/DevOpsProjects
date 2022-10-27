@@ -9,6 +9,9 @@
     - name: Stop all existing containers
       shell: docker rm $(docker ps -a -q)
     
+    - name: Pulling from git
+      shell: git clone "https://github.com/msethi006/DevOpsProjects.git"
+      
     - name: docker build from image
       shell: docker build -t webapp1 -f ./Project3/Dockerfile .
     
