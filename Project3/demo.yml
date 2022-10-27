@@ -1,0 +1,18 @@
+---
+- hosts: production
+  become: true
+
+  tasks:
+    - name: Stop all existing containers
+      shell: docker stop $(docker ps -a -q)
+
+    - name: Stop all existing containers
+      shell: docker rm $(docker ps -a -q)
+    
+    - name: docker build from image
+      shell: docker build -t webapp1 -f ./Project3/Dockerfile .
+    
+    - name: docker running container
+      shell: docker run -d -p 8501:8501 webapp1
+
+    

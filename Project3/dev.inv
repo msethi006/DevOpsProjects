@@ -1,0 +1,2 @@
+[production]
+52.14.36.145 ansible_user=ec2-user
