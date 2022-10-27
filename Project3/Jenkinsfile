@@ -14,7 +14,7 @@ pipeline {
         stage('Build using Ansible') {
             steps {
                 git credentialsId: '849445ba-9f7b-48d9-a16c-554b1d1d3aaf', url: 'https://github.com/msethi006/DevOpsProjects.git', branch: 'dev'
-                ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible-master', inventory: './dev.in', playbook: './demo.yml'
+                ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible-master', inventory: './Project3/dev.in', playbook: './Project3/demo.yml'
             }
         }
         stage('Test') {
