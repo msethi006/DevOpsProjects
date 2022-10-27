@@ -12,6 +12,9 @@
     - name: Pulling from git
       shell: git clone "https://github.com/msethi006/DevOpsProjects.git"
 
+    - name: Chaning directory
+      shell: cd DevOpsProjects
+
     - name: docker build from image
       shell: docker build -t webapp1 -f ./DevOpsProjects/Project3/Dockerfile .
     
